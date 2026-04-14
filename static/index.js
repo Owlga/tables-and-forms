@@ -1,2 +1,5 @@
-const petType = document.getElementById("petType");
-petType.reset();
+const resetButton = document.getElementById("resetButton");
+const form = document.querySelector("form");
+resetButton.addEventListener("click", () => {
+    form.reset();
+});
