@@ -8,9 +8,33 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+<form action="/pets/orders" method="post">
+    <label for="petType"></label>
+    <select name="petType" id="petType">
+        <option value="Mammal" selected>Млекопитающее</option>
+        <option value="Fish">Рыба</option>
+        <option value="Bird">Птица</option>
+    </select>
 
-    <!--Форму размещай тут-->
+    <label>
+        <input type="radio" name="gender" value="Male"> Самец
+    </label>
+    <label>
+        <input type="radio" name="gender" value="Female" checked> Самка
+    </label>
+    <label>
+        <input type="radio" name="gender" value="Other"> Anything
+    </label>
 
+    <label for="eyeColor"></label>
+    <select name="eyeColor" id="eyeColor">
+        <option value="Blue" selected>Синий</option>
+        <option value="Green">Зелёный</option>
+        <option value="Other">Другой</option>
+    </select>
+
+    <button type="submit">Отправить</button>
+</form>
 </main>
 </body>
 </html>
