@@ -8,34 +8,29 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+
 <form action="/pets/orders" method="post">
     <label for="petType"></label>
+
     <select name="petType" id="petType" required>
-        <option value="Mammal" selected>Млекопитающее</option>
-        <option value="Fish">Рыба</option>
-        <option value="Bird">Птица</option>
+        <option value="cat" selected>Млекопитающее</option>
+        <option value="dog">Рыба</option>
+        <option value="tiger">Птица</option>
     </select>
 
     <label>
-        <input type="radio" name="gender" value="Male"> Самец
+        <input type="radio" name="gender" value="boy"> Самец
     </label>
     <label>
-        <input type="radio" name="gender" value="Female" checked> Самка
+        <input type="radio" name="gender" value="girl" checked> Самка
     </label>
     <label>
-        <input type="radio" name="gender" value="Other"> Anything
+        <input type="radio" name="gender" value="none"> Anything
     </label>
 
     <label for="eyeColor"></label>
-    <select name="eyeColor" id="eyeColor" required>
-        <option value="Blue" selected>Синий</option>
-        <option value="Green">Зелёный</option>
-        <option value="Other">Другой</option>
-    </select>
+    <input type="color" name="eyeColor" id="eyeColor" required>
 
-    <textarea name="rules" id="rules" placeholder="правила введи для животинки"></textarea>
-    <input type="tel" name="phone" placeholder="Телефон"></input>
-    <input type="email" name="email" placeholder="Почта"></input>
     <label for="tailLength"></label>
     <input type="number" name="tailLength" id="tailLength" value="10" required>
 
@@ -44,6 +39,16 @@
 
     <label for="dateOfBirth"></label>
     <input type="date" name="dateOfBirth" id="dateOfBirth" value="2025-01-01" required>
+
+    <label for="phone"></label>
+    <input type="tel" name="phone" id="phone" placeholder="Телефон" value="89000000000" required>
+
+    <label for="email"></label>
+    <input type="email" name="email" id="email" placeholder="Почта" value="valid@mail.ru" required>
+
+    <label>
+        <input type="radio" name="rules" value="true" checked> RULES
+    </label>
 
     <button type="submit">Отправить</button>
 </form>
