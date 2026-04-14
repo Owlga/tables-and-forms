@@ -10,7 +10,7 @@
     <h1>Найди себе друга!</h1>
 <form action="/pets/orders" method="post">
     <label for="petType"></label>
-    <select name="petType" id="petType">
+    <select name="petType" id="petType" required>
         <option value="Mammal" selected>Млекопитающее</option>
         <option value="Fish">Рыба</option>
         <option value="Bird">Птица</option>
@@ -27,11 +27,20 @@
     </label>
 
     <label for="eyeColor"></label>
-    <select name="eyeColor" id="eyeColor">
+    <select name="eyeColor" id="eyeColor" required>
         <option value="Blue" selected>Синий</option>
         <option value="Green">Зелёный</option>
         <option value="Other">Другой</option>
     </select>
+
+    <label for="tailLength"></label>
+    <input type="number" name="tailLength" id="tailLength" value="10" required>
+
+    <label for="name"></label>
+    <input type="text" name="name" id="name" value="default name" required>
+
+    <label for="dateOfBirth"></label>
+    <input type="date" name="dateOfBirth" id="dateOfBirth" value="2025-01-01" required>
 
     <button type="submit">Отправить</button>
 </form>
